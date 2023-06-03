@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 
-    int n, x;
+    unsigned long long n, x;
 
     unsigned long long sum = 0;
     cin >> n;
@@ -20,7 +20,7 @@ int main()
     // cout << endl;
     // cout << '\t' << n << '\t' << sum << '\t' << (1 + n) * n / 2 << endl;
 
-    cout << (int)((1 + n) * n / 2 - sum) << endl;
+    cout << ((1 + n) * n / 2 - sum) << endl;
 
     return 0;
 }
