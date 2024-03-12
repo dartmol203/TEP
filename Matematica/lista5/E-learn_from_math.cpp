@@ -29,11 +29,11 @@ int main()
 
     cin >> x;
 
-    int l = 4, r = x;
-    while (l + r != x and is_prime(l) == 0 and is_prime(r) == 0)
+    int l = 1, r = x;
+    // cout << l + r << ' ' << l << ' ' << r << ' ' << is_prime(l) << ' ' << is_prime(r) << endl;
+    while (l + r != x or is_prime(l) or is_prime(r))
     {
-        cout << l + r << ' ' << is_prime(l) << ' ' << is_prime(r) << endl;
-        if (l + r > x)
+        if (l + r >= x)
         {
             r--;
         }
@@ -41,10 +41,9 @@ int main()
         {
             l++;
         }
+        // cout << l + r << ' ' << l << ' ' << r << ' ' << is_prime(l) << ' ' << is_prime(r) << endl;
     }
     cout << l << ' ' << r << endl;
-
-    cout << is_prime(13) << endl;
 
     return 0;
 }
